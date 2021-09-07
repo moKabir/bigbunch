@@ -14,7 +14,8 @@
                 <div class="container">
                     <div class="bar-wrapper">
                         <span class="announcment">
-                            Enjoy same day flower delivery for orders placed before 1pm. Orders placed after 1pm will be delivered	                    		 the next day.
+                            Enjoy same day flower delivery for orders placed before 1pm. Orders placed after 1pm will be 					                              delivered the next day.
+                            <div class="close"></div>
                          </span>   
                         <span class="contact">
                             <a href="mailto:mike@thebigbunch.com.au" class="email">mike@thebigbunch.com.au</a>
@@ -22,6 +23,7 @@
                         </span>
                     </div>
                 </div>
+                
             </div>
             <header class="site-header">
                 <div class="container">
@@ -987,7 +989,7 @@
                 infinite: true,
                 arrows: true,
                 speed: 300,
-                appendArrows:".slider-container",
+                //appendArrows:".product-feature-slider-main",
                 slidesToShow: 3,
                 slidesToScroll: 1,
 				responsive: [
@@ -996,8 +998,8 @@
 			   	settings: {
 				arrows: false,
 				slidesToShow: 1,
-				slidesToScroll: 1,
-				appendArrows:".slider-container"
+				slidesToScroll: 1
+				//appendArrows:".product-feature-slider-main"
 				
 			  }
 			}
@@ -1038,6 +1040,8 @@
           });
 		  
     		$(".humburger").on("click touchstart", function (e) {
+				e.stopPropagation();
+				e.preventDefault();
          		$(this).parent().toggleClass("menu-open");
          	});
 			
@@ -1048,10 +1052,12 @@
 //         	});
 			
 			$(".close").on("click touchstart", function (e) {    
-				$(this).parent().parent().removeClass("menu-open");
+				$(this).parent().addClass("announce-close");
          	});
 			
 			$(".cta-btn ul li a").on("click touchstart", function (e) {
+				e.stopPropagation();
+				e.preventDefault();
          		$(this).parent().toggleClass("toggle-open").children('div').addClass('active');
 				$(this).parent().siblings().removeClass("toggle-open");
          	});
