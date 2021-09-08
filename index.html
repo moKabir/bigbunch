@@ -868,6 +868,7 @@
                             <li><img src="images/truck.png"/>SAME DAY FLOWER DELIVERY</li>
                             <li><img src="images/australia.png"/>PLACE YOUR ORDER TODAY</li>	
                         </ul>
+                       	<div class="footer-link-wrapper">
                         <div class="footer-block">
                         	<h5 class="footer-block-title">Links</h5>
                             <ul>
@@ -883,7 +884,7 @@
                             <ul>
                             	<li><a href="#">Mother’s Day Flowers</a></li>
                                 <li><a href="#">Valentine’s Day</a></li>
-                                <li><a href="#">Wedding & Events</a></li>
+                                <li><a href="#">Wedding &amp; Events</a></li>
                                 <li><a href="#">Corporate</a></li>        
                             </ul>	
                         </div>
@@ -892,7 +893,7 @@
                             <ul>
                             	<li><a href="#">Login</a></li>
                                 <li><a href="#">Gift Vouchers</a></li>
-                                <li><a href="#">Change & Return</a></li>
+                                <li><a href="#">Change &amp; Return</a></li>
                                 <li><a href="#">Delivery Information</a></li>  
                                 <li><a href="#">FAQ</a></li>    
                             </ul>
@@ -902,7 +903,7 @@
                             <ul>
                             	<li><a href="#">About</a></li>
                                 <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
                                 <li><a href="#">Privacay Policy</a></li>
                                 <li><a href="#">Contact</a></li>      
                             </ul>
@@ -915,38 +916,32 @@
                                 <li><a href="tel:0395107533">03 9510 7533</a></li>
                                 <li><a href="mailto:mike@thebigbunch.com.au">mike@thebigbunch.com.au</a></li>     
                             </ul>
-                        </div> 
+                        </div>
+    </div>
+                        
                         <div class="ctr-title"> <h5 class="footer-block-title">Areas We Guarantee Same Day Delivery</h5></div>
-                        <div class="footer-block area">
+                      	<div class="footer-block area">
                             <ul>
                             	<li><a href="#">Florist Melbourne</a></li>
                                 <li><a href="#">Florist Prahran</a></li>
                                 <li><a href="#">Florist Toorak</a></li>           
-                            </ul>  
-                        </div>
-                        <div class="footer-block area">
-                            <ul>
+                             
+                        
+                        
+                          
                             	<li><a href="#">Florist Malvern</a></li>
                                 <li><a href="#">Yarra Florist</a></li>
                                 <li><a href="#">Albert Park</a></li>           
-                            </ul>   
-                        </div>
-                        <div class="footer-block area">
-                            <ul>
+                            
+                            
                             	<li><a href="#">Florist Armadale</a></li>
                                 <li><a href="#">Florist Brighton</a></li>
                                 <li><a href="#">Florist Caulfield</a></li>           
-                            </ul> 
-                        </div>
-                        <div class="footer-block area">
-                            <ul>
+                           
                             	<li><a href="#">Florist Glen Iris</a></li>
                                 <li><a href="#"> Florist Richmond</a></li>
                                 <li><a href="#">Florist St Kilda</a></li>           
-                            </ul>   
-                        </div>
-                        <div class="footer-block area">
-                            <ul>
+                            
                             	<li><a href="#">Florist Windsor</a></li>
                                 <li><a href="#">Florist South Melbourne</a></li>
                                 <li><a href="#">Florist Melbourne CBD</a></li>           
@@ -994,7 +989,35 @@
                 slidesToScroll: 1,
 				responsive: [
 				{
-			   	breakpoint: 579,
+			   	breakpoint: 1199,
+			   	settings: {
+				arrows: false,
+				slidesToShow: 2,
+				slidesToScroll: 1
+				//appendArrows:".product-feature-slider-main"
+				}
+			  },
+			  {
+			   	breakpoint: 1024,
+			   	settings: {
+				arrows: false,
+				slidesToShow: 3,
+				slidesToScroll: 1
+				//appendArrows:".product-feature-slider-main"
+				}
+			  },
+				{
+			   	breakpoint: 639,
+			   	settings: {
+				arrows: false,
+				slidesToShow: 2,
+				slidesToScroll: 1
+				//appendArrows:".product-feature-slider-main"
+				
+			  }
+			},
+			{
+			   	breakpoint: 479,
 			   	settings: {
 				arrows: false,
 				slidesToShow: 1,
@@ -1003,6 +1026,7 @@
 				
 			  }
 			}
+			
   ]
               });
           
@@ -1015,13 +1039,15 @@
                 slidesToScroll: 1
               });
           
+ 
            $(".product-slider .tab-link").click(function(){
             var filter = $(this).attr("data-title");
             var slotimage = $(this).attr("data-icon");
             $(".product-slider .product-feature-slider-main .product-feature-slider").removeClass("active_slide");
             $(".product-slider .product-feature-slider-main .product-feature-slider#" + filter).addClass("active_slide");
             $(".product-slider .slide-side-img-container img").removeClass("active_img");
-            $(".product-slider .slide-side-img-container img#" + slotimage).addClass("active_img");			
+            $(".product-slider .slide-side-img-container img#" + slotimage).addClass("active_img");
+			 			
           });
 		  
 		  $(".tab-link").click(function(){
