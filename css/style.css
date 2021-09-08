@@ -300,6 +300,7 @@ input.search-submit {
     width: 26px;
     background-image: url(../images/search.png);
     background-repeat: no-repeat;
+    background-color: transparent;
 }
 .user-option{display:none;}
 .user-option > ul {
